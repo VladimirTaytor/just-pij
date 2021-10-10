@@ -67,6 +67,20 @@
     margin-bottom: 5px;
     font-size: 12px;
   }
+
+  @media (max-width: 850px) {
+    .posts__item {
+      flex-basis: 50%;
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .posts__item {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
 </style>
 
 <svelte:head>

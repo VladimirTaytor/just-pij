@@ -21,12 +21,6 @@
 		margin: 1em auto;
 	}
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-
   .motto__container {
     margin-top: 15px;
   }
@@ -40,6 +34,18 @@
     padding: 0 15px;
     display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 4em;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .motto__container {
+      flex-direction: column;
+    }
   }
 </style>
 
