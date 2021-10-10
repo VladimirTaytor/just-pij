@@ -4,6 +4,7 @@
       // As with the server route, we have acces to params.slug here
       const res = await this.fetch(`api/blog/${params.slug}`);
       const { post } = await res.json();
+      console.log(post)
       return { post };
     } catch (err) {
       this.error(500, err);

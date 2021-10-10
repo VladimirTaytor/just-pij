@@ -16,5 +16,8 @@
   "devDependencies": {
     "@sanity/cli": "^2.0.0",
     "lerna": "^3.14.0"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2"
   }
 }

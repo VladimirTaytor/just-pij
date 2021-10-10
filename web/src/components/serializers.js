@@ -2,14 +2,11 @@
 // https://github.com/movingbrands/svelte-portable-text
 import BlockContent from '@movingbrands/svelte-portable-text';
 // https://www.npmjs.com/package/@sanity/image-url
-import urlBuilder from '@sanity/image-url';
-import client from '../sanityClient';
 import Image from './Image.svelte';
 import Code from './Code.svelte';
 import Author from './Author.svelte';
 import Link from './Link.svelte';
-
-const urlFor = source => urlBuilder(client).image(source);
+import { urlFor} from '../helpers/image'
 
 export default {
   marks: {
