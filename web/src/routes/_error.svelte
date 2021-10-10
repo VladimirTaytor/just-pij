@@ -28,13 +28,16 @@
 </style>
 
 <svelte:head>
-	<title>{status}</title>
+	<title>Just Pij - Error {status}</title>
 </svelte:head>
+<div class="container-flex" style="margin-top: 25px; flex-wrap: wrap;">
+  <img height="250px" alt="Not found" src="404.png" style="margin-right: 50px; margin-bottom: 25px;"/>
+  <div>
+    <h1>{status}</h1>
 
-<h1>{status}</h1>
-
-<p>{error.message}</p>
-
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
-{/if}
+    <p>{error.message}</p>
+    {#if dev && error.stack}
+      <pre>{error.stack}</pre>
+    {/if}
+  </div>
+</div>

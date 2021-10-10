@@ -33,20 +33,35 @@
 
   .motto__image {
     max-height: 512px;
+    padding: 0 15px;
+  }
+
+  .motto__text-container {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
   }
 </style>
 
 <svelte:head>
-	<title>PJ Podcast</title>
+	<title>Just Pij</title>
 </svelte:head>
 
+<script>
+  import Button from '../components/Button.svelte';
+
+  function onListenClick () {
+    console.log('onListenClick')
+  }
+</script>
+
 <div class="header-block">
-  <h1>PJ Podcast</h1>
+  <h1>Just Pij</h1>
   <div class="container-flex motto__container">
     <img class="motto__image" alt="some image" src="/room_pic.jpeg"/>
-    <div class="container-flex">
-      <h2 class="motto__text">Interesting music - interesting life.</h2>
-      <button class="motto__button">Listen Now</button>
+    <div class="motto__text-container">
+      <h2 class="motto__text">Welcome to my <a href="episodes">music podcast</a>, <a href="blog">blog</a>, and <a href="about">portfolio</a> website</h2>
+      <Button onclick="onListenClick" text="Listen Now"/>
     </div>
   </div>
 </div>

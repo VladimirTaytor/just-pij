@@ -1,5 +1,6 @@
 <script>
 	export let segment;
+	import Donate from './Donate.svelte'
 </script>
 
 <style>
@@ -12,6 +13,7 @@
 	ul {
 		margin: 0;
 		padding: 0;
+    display: flex;
 	}
 
 	/* clearfix */
@@ -51,7 +53,10 @@
 <nav>
 	<ul>
 		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a rel=prefetch class='{segment === "episodes" ? "selected" : ""}' href='episodes'>episodes</a></li>
+		<li><a rel=prefetch class='{segment === "episodes" ? "selected" : ""}' href='episodes'>podcast</a></li>
+		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
     <li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
+    <li style="flex-grow: 1"></li>
+    <li><Donate/></li>
 	</ul>
 </nav>

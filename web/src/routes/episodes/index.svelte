@@ -70,7 +70,7 @@
 </style>
 
 <svelte:head>
-  <title>PJ Podcast - Episodes</title>
+  <title>Just Pij - Episodes</title>
 </svelte:head>
 
 <h1>Recent episodes:</h1>
@@ -80,7 +80,7 @@
 		<div class="posts__item">
       <div class="post">
         <a class="post__title" rel='prefetch' href='episodes/{post.slug.current}'>
-          <img class="post__image"
+          <img class="post__image monochrome"
                alt="{post.mainImage.alt}"
                src="{urlFor(post.mainImage).width('247').height('145').auto('format').url()}"/>
         </a>
