@@ -36,6 +36,7 @@ code {
 }
 
 /* colours constants */
+/* https://coolors.co/595959-7f7f7f-a5a5a5-cccccc-f2f2f2 */
 :root {
   --primary__color_dark: #595959;
   --primary__color: #7f7f7f;
@@ -50,4 +51,9 @@ code {
 
 .container-flex {
   display: flex;
+}
+
+.monochrome {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
