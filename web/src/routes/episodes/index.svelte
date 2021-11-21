@@ -1,7 +1,10 @@
 <script context="module">
-  export async function preload({ params }) {
+  import {getCookie} from '../../modules/cookies'
+
+  export async function preload(page, session) {
+    const lang = getCookie('locale');
     try {
-      const res = await this.fetch('api/episodes/all');
+      const res = await this.fetch(`api/episodes/all?lang=${lang}`);
       const { posts } = await res.json()
       return { posts };
     } catch (err) {

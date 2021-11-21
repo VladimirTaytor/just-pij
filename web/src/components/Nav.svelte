@@ -58,8 +58,8 @@
     <li><a class='{segment === "about" ? "selected" : ""}' href='about'>{$_('nav.about')}</a></li>
     <li style="flex-grow: 1"></li>
     <li>
-      <a href={`#!${$locale === 'uk' ? 'en' : 'uk'}`} on:click={() => ($locale = $locale === 'uk' ? 'en' : 'uk')}>
-        {$locale === 'uk' ? '🇺🇦' : '🇺🇸'}
+      <a href={`#!${$locale.includes('uk') ? 'en' : 'uk'}`} on:click={() => ($locale = $locale.includes('uk') ? 'en' : 'uk')}>
+        {$locale.includes('uk') ? '🇺🇦' : '🇺🇸'}
       </a>
     </li>
     <li><Donate/></li>
