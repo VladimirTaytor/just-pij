@@ -6,7 +6,7 @@ import client from '../../../sanityClient'
  */
 export async function get (req, res) {
   try {
-    const posts = await client.fetch('*[_type == "post" && defined(slug.current) && publishedAt < now() && references(*[_type == "category" && title == "Podcast"]._id)]|order(publishedAt desc)')
+    const posts = await client.fetch('*[_type == "post" && defined(slug.current) && publishedAt < now() && references(*[_type == "category" && title == "Blog"]._id)]|order(publishedAt desc)')
     res.end(JSON.stringify({ posts }));
   } catch (err) {
     res.writeHead(500, {
