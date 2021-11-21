@@ -27,7 +27,6 @@
 
   .motto__image {
     max-height: 512px;
-    padding: 0 15px;
   }
 
   .motto__text-container {
@@ -64,10 +63,10 @@
 <div class="header-block">
   <h1>Just Pij</h1>
   <div class="container-flex motto__container">
-    <img class="motto__image" alt="some image" src="/room_pic.jpeg"/>
+    <img class="motto__image" alt="some image" src="/images/room_pic.jpeg"/>
     <div class="motto__text-container">
-      <h2 class="motto__text">Welcome to my <a href="episodes">music podcast</a>, <a href="blog">blog</a>, and <a href="about">portfolio</a> website</h2>
-      <Button onclick="onListenClick" text="Listen Now"/>
+      <h2 class="motto__text">Welcome to my <a href="episodes">podcast</a>, <a href="blog">blog</a>, and <a href="about">portfolio</a> website</h2>
+      <!-- <Button onclick="onListenClick" text="Listen Now"/> -->
     </div>
   </div>
 </div>

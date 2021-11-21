@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "home",
+    "podcast": "podcast",
+    "blog": "blog",
+    "about": "about"
+  },
+  "languages": {
+    "en": "English",
+    "uk": "Українська"
+  }
+}

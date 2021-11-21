@@ -1,6 +1,7 @@
 <script>
-	export let segment;
 	import Donate from './Donate.svelte'
+  import { _, locale } from 'svelte-i18n';
+  export let segment;
 </script>
 
 <style>
@@ -49,14 +50,18 @@
 		display: block;
 	}
 </style>
-
 <nav>
 	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a rel=prefetch class='{segment === "episodes" ? "selected" : ""}' href='episodes'>podcast</a></li>
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
-    <li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
+		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>{$_('nav.home')}</a></li>
+		<li><a rel=prefetch class='{segment === "episodes" ? "selected" : ""}' href='episodes'>{$_('nav.podcast')}</a></li>
+		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>{$_('nav.blog')}</a></li>
+    <li><a class='{segment === "about" ? "selected" : ""}' href='about'>{$_('nav.about')}</a></li>
     <li style="flex-grow: 1"></li>
+    <li>
+      <a href={`#!${$locale === 'uk' ? 'en' : 'uk'}`} on:click={() => ($locale = $locale === 'uk' ? 'en' : 'uk')}>
+        {$locale === 'uk' ? '🇺🇦' : '🇺🇸'}
+      </a>
+    </li>
     <li><Donate/></li>
 	</ul>
 </nav>

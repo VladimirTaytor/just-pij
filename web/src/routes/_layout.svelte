@@ -1,22 +1,33 @@
-<script>
-	import Nav from '../components/Nav.svelte';
+<script context="module">
+  import {isLoading, waitLocale} from 'svelte-i18n';
 
-	export let segment;
+  export async function preload(page) {
+    return waitLocale();
+  }
+</script>
+<script>
+  import Nav from '../components/Nav.svelte';
+
+  export let segment;
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  main {
+    position: relative;
+    max-width: 56em;
+    background-color: white;
+    padding: 2em;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 </style>
 
 <Nav {segment}/>
 
-<main>
-	<slot></slot>
-</main>
+{#if $isLoading}
+  <div class="loading">Loading...</div>
+{:else}
+  <main>
+    <slot></slot>
+  </main>
+{/if}
