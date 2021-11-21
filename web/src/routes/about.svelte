@@ -14,7 +14,7 @@
 </script>
 <style>
   img {
-    width: 350px;
+    max-width: 350px;
     border: 1px solid var(--primary__color_light);
   }
 

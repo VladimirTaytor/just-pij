@@ -43,7 +43,12 @@
 
   @media (max-width: 700px) {
     .motto__container {
-      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+
+    .motto__text-container {
+      padding: 0;
+      text-align: center;
     }
   }
 </style>
