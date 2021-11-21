@@ -24,10 +24,11 @@
 
 <Nav {segment}/>
 
-{#if $isLoading}
-  <div class="loading">Loading...</div>
-{:else}
-  <main>
+
+<main>
+  {#if $isLoading}
+    <div class="loading">Loading...</div>
+  {:else}
     <slot></slot>
-  </main>
-{/if}
+  {/if}
+</main>

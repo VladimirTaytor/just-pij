@@ -1,7 +1,7 @@
 <script context="module">
   export async function preload({ params }) {
     try {
-      const res = await this.fetch('api/blog/all');
+      const res = await this.fetch('api/episodes/all');
       const { posts } = await res.json()
       return { posts };
     } catch (err) {
@@ -11,6 +11,8 @@
 </script>
 
 <script>
+  import {_} from 'svelte-i18n'
+
   export let posts;
   import _get from "lodash.get"
   import {urlFor} from '../../helpers/image'
@@ -87,7 +89,7 @@
   <title>Just Pij - Episodes</title>
 </svelte:head>
 
-<h1>Recent episodes:</h1>
+<h1>{$_('episodes.title')}</h1>
 <br>
 <div class="container-flex posts">
 	{#each posts as post}

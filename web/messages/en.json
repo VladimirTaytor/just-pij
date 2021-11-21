@@ -8,5 +8,24 @@
   "languages": {
     "en": "English",
     "uk": "Українська"
+  },
+  "home": {
+    "title": {
+      "phrase": "Welcome to the home of my <a href=\"{podcastUrl}\">podcast</a>, <a href=\"{blogUrl}\">blog</a> and <a href=\"{portfolioUrl}\">portfolio</a>."
+    }
+  },
+  "episodes": {
+    "title": "Recent releases"
+  },
+  "about": {
+    "title": "About",
+    "hello": "Hello, my name is Volodymyr (Pij) Pihol and this is my personal website",
+    "me": "I'm {age} boy originally from Rivne, Ukraine. Working as Full stack Engineer, big fan of music, computer games and sometimes I'm making cool stuff, you would be able to find everything on this website :)",
+    "enjoy": "Enjoy your stay ٩(˘◡˘)۶",
+    "questions": "For any questions: <a href=\"mailto:volodymyr.pihol@gmail.com\">volodymyr.pihol@gmail.com</a>"
+  },
+  "notFound": {
+    "title": "Oops..",
+    "message": "Nothing here yet ( ≖.≖)"
   }
 }
