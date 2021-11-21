@@ -66,6 +66,25 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'language',
+      type: 'string',
+      title: 'Language',
+      initialValue: 'en',
+      options: {
+        layout: 'dropdown',
+        list: [
+          {
+            title: 'English',
+            value: 'en'
+          },
+          {
+            title: 'Українська',
+            value: 'uk'
+          }
+        ]
+      }
     }
   ],
   orderings: [
