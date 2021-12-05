@@ -139,7 +139,7 @@
     <img class="cover" alt="cover" src="images/podcast cover.jpg"/>
   </div>
   <div class="caption">
-    <h2>Just Pij Podcast</h2>
+    <h2>{$_('podcast.title')}</h2>
     <p>{@html $_('podcast.about')}</p>
     <p>{$_('podcast.description')}</p>
     <p><b>{$_('podcast.why')}</b></p>
@@ -148,7 +148,7 @@
 </div>
 <hr/>
 <div class="title-container">
-  <p class="title">{$_('podcast.title')}</p>
+  <p class="title">{$_('podcast.recent')}</p>
   <p>
     <b>
       {$_('podcast.promotion')}

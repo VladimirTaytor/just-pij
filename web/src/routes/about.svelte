@@ -45,13 +45,12 @@
   }
 </style>
 
-<h1>{$_('about.title')}</h1>
-
 <div class="container-flex">
   <div>
     <img alt="art" src="/images/profile pic.jpg"/>
   </div>
   <div class="content">
+    <h2>{$_('about.title')}</h2>
     <p>{$_('about.hello')}</p>
     <p>{$_('about.me', { values: {age: getMyAge()}})}</p>
     <p>{$_('about.enjoy')}</p>
