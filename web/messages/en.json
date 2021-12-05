@@ -14,8 +14,13 @@
       "phrase": "Welcome to the home for my <a href=\"{podcastUrl}\">podcast</a>, <a href=\"{blogUrl}\">blog</a> and <a href=\"{portfolioUrl}\">portfolio</a>."
     }
   },
-  "episodes": {
-    "title": "Recent releases"
+  "podcast": {
+    "title": "Recent releases",
+    "about": "This is music podcast with <i>unusual</i> format",
+    "description": "In short it's just playlist created by me with some theme in mind",
+    "why": "Why is it like this?",
+    "answer": "According to author licenses I can't use music in my podcast directly. So if there will be a need in adding some description to my playlists it will be done using text or audio podcast </br> <i class=\"disclaimer\">Disclaimer: Mostly this project is targeted on Ukrainian audience, but sometimes there will be English versions</i>",
+    "promotion": "Don't miss new episodes subscribe to my"
   },
   "about": {
     "title": "About",
@@ -23,6 +28,12 @@
     "me": "I'm {age} boy originally from Rivne, Ukraine. Working as Full stack Engineer, big fan of music, computer games and sometimes I'm making cool stuff, you would be able to find everything on this website :)",
     "enjoy": "Enjoy your stay ٩(˘◡˘)۶",
     "questions": "For any questions: <a href=\"mailto:volodymyr.pihol@gmail.com\">volodymyr.pihol@gmail.com</a>"
+  },
+  "donate": {
+    "title": "Donations",
+    "description":"Thanks for being interested in my content. If you like what I'm doing here you always can support me with:",
+    "mono": "direct one time payment to my Monobank card <b class=\"card-number\">{monoCard}</b>",
+    "kofi": "or by monthly subscription to my <b><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"{kofiUrl}\">Ko-fi</a></b>"
   },
   "notFound": {
     "title": "Oops..",

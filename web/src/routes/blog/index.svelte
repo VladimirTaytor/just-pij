@@ -37,7 +37,7 @@
 </style>
 
 <svelte:head>
-  <title>Just Pij - Blog}</title>
+  <title>Just Pij - Blog</title>
 </svelte:head>
 <div class="container-flex" style="">
   <img height="250px" alt="Not found" src="404.png" style="margin-right: 50px; margin-bottom: 25px;"/>

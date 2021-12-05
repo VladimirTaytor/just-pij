@@ -26,6 +26,8 @@
   }
 
   .motto__image {
+    max-width: 100%;
+
     max-height: 512px;
   }
 
@@ -33,6 +35,10 @@
     padding: 0 15px;
     display: flex;
     flex-direction: column;
+  }
+
+  .motto__text {
+    margin-bottom: 25px;
   }
 
   @media (min-width: 480px) {
@@ -69,7 +75,9 @@
 <div class="header-block">
   <h1>Just Pij</h1>
   <div class="container-flex motto__container">
-    <img class="motto__image" alt="some image" src="/images/room_pic.jpeg"/>
+    <div>
+      <img class="motto__image" alt="some image" src="/images/room_pic.jpeg"/>
+    </div>
     <div class="motto__text-container">
       <h2
         class="motto__text">{@html $_('home.title.phrase', {

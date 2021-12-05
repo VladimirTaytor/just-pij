@@ -3,6 +3,7 @@
 </svelte:head>
 <script>
   import {_} from 'svelte-i18n'
+  import Socials from '../components/Socials.svelte'
 
   function getMyAge() {
     const yearOfBirth = new Date('1997-12-31')
@@ -14,12 +15,16 @@
 </script>
 <style>
   img {
-    max-width: 350px;
+    width: 100%;
     border: 1px solid var(--primary__color_light);
   }
 
   .content {
     margin-left: 25px;
+  }
+
+  p:first-child {
+    margin-top: 0;
   }
 
   @media (min-width: 480px) {
@@ -43,18 +48,13 @@
 <h1>{$_('about.title')}</h1>
 
 <div class="container-flex">
-  <img alt="art" src="/images/profile pic.jpg"/>
+  <div>
+    <img alt="art" src="/images/profile pic.jpg"/>
+  </div>
   <div class="content">
     <p>{$_('about.hello')}</p>
     <p>{$_('about.me', { values: {age: getMyAge()}})}</p>
     <p>{$_('about.enjoy')}</p>
-    <br/>
-    <p>{@html $_('about.questions')}</p>
-    <hr/>
-    <div class="socials">
-      <a href="https://telegram.me/vovapihol">Telegram</a>
-      <a href="https://github.com/VladimirTaytor">GitHub</a>
-      <a href="https://https://www.instagram.com/vovapihol">Instagram</a>
-    </div>
+    <Socials/>
   </div>
 </div>

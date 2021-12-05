@@ -1,0 +1,5 @@
+export const INSTAGRAM_URL = "https://www.instagram.com/vovapihol"
+export const PODCAST_INSTAGRAM_URL = "https://www.instagram.com/just.pij"
+export const GITHUB_URL = "https://github.com/VladimirTaytor"
+export const TELEGRAM_URL = "https://telegram.me/vovapihol"
+export const LINKEDIN_URL = "https://www.linkedin.com/in/vladimir-pihol"
