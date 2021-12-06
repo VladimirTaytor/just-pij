@@ -20,6 +20,7 @@
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "lodash.get": "^4.4.2",
+    "sapper-google-analytics": "^1.0.2",
     "svelte-i18n": "^3.3.13"
   }
 }
