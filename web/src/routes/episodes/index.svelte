@@ -4,7 +4,7 @@
   export async function preload(page, session) {
     const lang = getCookie('locale');
     try {
-      const res = await this.fetch(`api/episodes/all?lang=${lang}`);
+      const res = await this.fetch(`api/episodes/all?lang=${lang}`, { credentials: 'include' });
       const {posts} = await res.json()
       return {posts};
     } catch (err) {

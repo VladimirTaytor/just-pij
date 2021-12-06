@@ -15,10 +15,11 @@ export async function get(req, res) {
       'references(*[_type == "category" && title == "Podcast"]._id)' +
       ']|order(publishedAt desc)';
 
-    const locale = req.query.lang
+    const isEmpty = locale => !locale || locale === 'undefined'
+    const lang = req.query.lang
 
     const params = {
-      lang: locale && locale !== 'undefined' ? locale : DEFAULT_LOCALE
+      lang: isEmpty(lang) ? req.cookies['locale'] || DEFAULT_LOCALE : lang
     }
 
     const posts = await client.fetch(query, params);

@@ -27,7 +27,12 @@ $locale.subscribe((value) => {
 
   // if running in the client, save the language preference in a cookie
   if (typeof window !== 'undefined') {
-    setCookie('locale', value);
+    const today = new Date()
+    const nextYear = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
+
+    setCookie('locale', value, {
+      expires: nextYear
+    });
   }
 });
 

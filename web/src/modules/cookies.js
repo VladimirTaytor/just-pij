@@ -23,7 +23,7 @@ export function setCookie(name, value, options = {}) {
 
   let updatedCookie = {
     [encodeURIComponent(name)]: encodeURIComponent(value),
-    sameSite: 'strict',
+    sameSite: 'lax',
     ...options,
   };
 
