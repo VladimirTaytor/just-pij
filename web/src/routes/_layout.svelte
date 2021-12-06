@@ -36,4 +36,6 @@
   {/if}
 </main>
 
-<GoogleAnalytics {stores} id={ga_measurment_id}/>
+{#if process.env.NODE_ENV !== 'development'}
+  <GoogleAnalytics {stores} id={ga_measurment_id}/>
+{/if}
