@@ -24,6 +24,7 @@ export function setCookie(name, value, options = {}) {
   let updatedCookie = {
     [encodeURIComponent(name)]: encodeURIComponent(value),
     sameSite: 'lax',
+    path: '/',
     ...options,
   };
 

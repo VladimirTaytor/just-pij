@@ -30,9 +30,12 @@ $locale.subscribe((value) => {
     const today = new Date()
     const nextYear = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
 
-    setCookie('locale', value, {
-      expires: nextYear
-    });
+    // if no locale yet
+    if (!getCookie('locale'))  {
+      setCookie('locale', value, {
+        expires: nextYear
+      });
+    }
   }
 });
 

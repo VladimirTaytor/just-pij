@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Just Pij - About</title>
+  <title>Just Pij - Donate</title>
 </svelte:head>
 <script>
   import {_} from 'svelte-i18n'

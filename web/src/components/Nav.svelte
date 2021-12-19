@@ -1,7 +1,17 @@
 <script>
 	import Donate from './Donate.svelte'
   import { _, locale } from 'svelte-i18n';
+  import {setCookie} from '../modules/cookies'
+
   export let segment;
+
+  const changeLocale = () => {
+    const newLocale = $locale.includes('uk') ? 'en' : 'uk'
+
+    $locale = newLocale
+
+    setCookie('locale', newLocale)
+  }
 </script>
 
 <style>
@@ -58,7 +68,7 @@
     <li><a class='{segment === "about" ? "selected" : ""}' href='about'>{$_('nav.about')}</a></li>
     <li style="flex-grow: 1"></li>
     <li>
-      <a href={`#!${$locale.includes('uk') ? 'en' : 'uk'}`} on:click={() => ($locale = $locale.includes('uk') ? 'en' : 'uk')}>
+      <a href={`#!${$locale.includes('uk') ? 'en' : 'uk'}`} on:click={() => changeLocale()}>
         {$locale.includes('uk') ? '🇺🇦' : '🇺🇸'}
       </a>
     </li>

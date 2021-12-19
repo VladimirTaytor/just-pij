@@ -164,7 +164,7 @@
            href='episodes/{post.slug.current}'>
           <img class="post__image monochrome"
                alt="{post.mainImage.alt}"
-               src="{urlFor(post.mainImage).width('247').height('145').auto('format').url()}"/>
+               src="{urlFor(post.mainImage).width('247').height('247').auto('format').url()}"/>
         </a>
 
         <a class="post__title" rel='prefetch'

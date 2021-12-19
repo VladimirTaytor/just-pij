@@ -10,6 +10,7 @@ export async function get(req, res) {
   try {
     const query = '*[' +
       '_type == "post" && defined(slug.current) && ' +
+      '!(_id in path("drafts.**")) &&' +
       'publishedAt < now() && ' +
       'language match $lang && ' +
       'references(*[_type == "category" && title == "Podcast"]._id)' +
