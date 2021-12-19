@@ -85,6 +85,18 @@ export default {
           }
         ]
       }
+    },
+    {
+      name: 'spotifyLink',
+      type: 'string',
+      title: 'Spotify link',
+      description: 'Link to Spotify playlist/podcast'
+    },
+    {
+      name: 'youtubeLink',
+      type: 'string',
+      title: 'Youtube link',
+      description: 'Link to Youtube playlist/podcast'
     }
   ],
   orderings: [

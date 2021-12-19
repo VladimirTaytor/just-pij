@@ -5,7 +5,8 @@
   },
   "api": {
     "projectId": "049af913",
-    "dataset": "production"
+    "dataset": "production",
+    "token": "skp3mta5yPWtpzRY320WRGgmYCwiuhpuH3cHNAlZbTtp3Aw4dgjCClv1JKyVAPef6WLUOpFKQ9pt8P6dB9lGyBnW47l5mgIR6MCkpVrQNsE2gBTDo0OIwag7qA5nowqDlGRn2p8q4zZDg5dXfRY7LrE0fxuFfuEkaUUrL64oSC8y1MjUngl9"
   },
   "plugins": [
     "@sanity/base",
