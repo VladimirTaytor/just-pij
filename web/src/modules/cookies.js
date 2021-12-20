@@ -1,3 +1,5 @@
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 export function getCookie(name, cookies) {
   if (cookies == null) {
     if (typeof window === 'undefined') {
@@ -25,6 +27,7 @@ export function setCookie(name, value, options = {}) {
     [encodeURIComponent(name)]: encodeURIComponent(value),
     sameSite: 'lax',
     path: '/',
+    secure: !isDevelopment,
     ...options,
   };
 
