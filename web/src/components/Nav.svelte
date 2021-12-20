@@ -10,7 +10,13 @@
 
     $locale = newLocale
 
-    setCookie('locale', newLocale)
+    const today = new Date()
+    const nextYear = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
+
+    setCookie('locale', newLocale, {
+      sameSite: 'None',
+      expires: nextYear
+    })
   }
 </script>
 

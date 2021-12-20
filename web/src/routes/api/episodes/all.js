@@ -2,6 +2,17 @@ import client from '../../../sanityClient'
 
 const DEFAULT_LOCALE = 'en'
 
+const getLocale = req => {
+  const isEmpty = locale => !locale || locale === 'undefined'
+  const lang = req.query.lang
+
+  return isEmpty(lang) ? req.cookies['locale'] || DEFAULT_LOCALE : lang
+}
+
+const normalizeLocale = (locale) => {
+  return locale.split('-')[0].split('_')[0]
+}
+
 /**
  * This route is called 'all' instead of index to prevent route conflicts.
  * @see https://sapper.svelte.dev/docs#Route_conflicts
@@ -16,11 +27,10 @@ export async function get(req, res) {
       'references(*[_type == "category" && title == "Podcast"]._id)' +
       ']|order(publishedAt desc)';
 
-    const isEmpty = locale => !locale || locale === 'undefined'
-    const lang = req.query.lang
+    const locale = getLocale(req)
 
     const params = {
-      lang: isEmpty(lang) ? req.cookies['locale'] || DEFAULT_LOCALE : lang
+      lang: normalizeLocale(locale)
     }
 
     const posts = await client.fetch(query, params);

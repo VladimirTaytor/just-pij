@@ -33,6 +33,7 @@ $locale.subscribe((value) => {
     // if no locale yet
     if (!getCookie('locale'))  {
       setCookie('locale', value, {
+        sameSite: 'None',
         expires: nextYear
       });
     }
