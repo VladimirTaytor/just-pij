@@ -1,6 +1,9 @@
 <script>
   export let text;
   export let onclick;
+  export let type;
+
+  const currentType = type || 'button'
 </script>
 
 <style>
@@ -24,14 +27,24 @@
     color: #fff;
   }
 
-  .button:active{
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+  .button:active {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
     -4px -4px 6px 0 rgba(116, 125, 136, .2),
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+  }
+
+  .link {
+    text-decoration: underline;
+  }
+
+  .link:hover {
+    cursor: pointer;
   }
 </style>
 
-
-<button class="button" on:click={onclick}>{text}</button>
-
+{#if (currentType === 'link')}
+  <a class:link={true} on:click={onclick}><slot></slot></a>
+{:else }
+  <button class:button={true} on:click={onclick}><slot></slot></button>
+{/if}

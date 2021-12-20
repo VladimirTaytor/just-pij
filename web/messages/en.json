@@ -22,7 +22,10 @@
     "description": "In short it's just playlist created by me with some theme in mind",
     "why": "Why is it like this?",
     "answer": "According to author licenses I can't use music in my podcast directly. So if there will be a need in adding some description to my playlists it will be done using text or audio podcast </br> <i class=\"disclaimer\">Disclaimer: Mostly this project is targeted on Ukrainian audience, but sometimes there will be English versions</i>",
-    "promotion": "Don't miss anything subscribe to my"
+    "promotion": "Don't miss anything subscribe to my",
+    "back": "Back",
+    "listenSpotify": "Listen now on Spotify",
+    "listenYoutube": "Listen now on Youtube"
   },
   "about": {
     "title": "About",

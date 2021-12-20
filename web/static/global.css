@@ -56,4 +56,10 @@ code {
 .monochrome {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.monochrome:hover {
+  -webkit-filter: none;
+  filter: none
 }
