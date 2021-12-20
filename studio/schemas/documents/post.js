@@ -30,7 +30,24 @@ export default {
     {
       name: 'mainImage',
       type: 'mainImage',
-      title: 'Main image'
+      title: 'Main image',
+      description: 'Image to be displayed in the list of all episodes'
+    },
+    {
+      name: 'coverImage',
+      type: 'coverImage',
+      title: 'Cover image',
+      description: 'Image to be displayed inside the post'
+    },
+    {
+      name: 'playlistDuration',
+      type: 'string',
+      description: 'Duration of playlist to be displayed on playlist page'
+    },
+    {
+      name: 'playlistSize',
+      type: 'number',
+      description: 'Number of tracks in playlist to be displayed on playlist page'
     },
     {
       name: 'excerpt',
