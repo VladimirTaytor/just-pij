@@ -87,7 +87,10 @@
           portfolioUrl: '/about'
         }
       })}</h2>
-      <!-- <Button onclick="onListenClick" text="Listen Now"/> -->
+
+      <h2>{$_('home.title.nowPlaying')} <b>renie cares - якби</b></h2>
+
+      <h2 style="white-space: nowrap;">{$_('home.title.welcome')}</h2>
     </div>
   </div>
 </div>

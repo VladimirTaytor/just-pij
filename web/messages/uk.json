@@ -11,7 +11,9 @@
   },
   "home": {
     "title": {
-      "phrase": "Вітаю друже у домівці мого <a href=\"{podcastUrl}\">подкасту</a>, <a href=\"{blogUrl}\">блогу</a> та <a href=\"{portfolioUrl}\">портфоліо</a>."
+      "phrase": "Вітаю друже у домівці мого <a href=\"{podcastUrl}\">подкасту</a>, <a href=\"{blogUrl}\">блогу</a> та <a href=\"{portfolioUrl}\">портфоліо</a>",
+      "nowPlaying": "Зараз лунає: ",
+      "welcome": "Почувай себе як вдома (ノ・∀・)ノ"
     }
   },
   "podcast": {
