@@ -5,6 +5,7 @@
     display: block;
     padding: 1em 0.5em;
 
+    text-decoration: none;
     font-weight: bolder;
 
     /* Fallback: Set a background color. */

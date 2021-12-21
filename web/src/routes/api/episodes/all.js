@@ -1,6 +1,6 @@
 import client from '../../../sanityClient'
 
-const DEFAULT_LOCALE = 'en'
+const DEFAULT_LOCALE = 'uk'
 
 const getLocale = req => {
   const isEmpty = locale => !locale || locale === 'undefined'

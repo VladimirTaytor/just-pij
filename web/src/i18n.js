@@ -5,7 +5,7 @@ import {
   locale as $locale,
 } from 'svelte-i18n';
 
-import { setCookie, getCookie } from './modules/cookies.js';
+import {setCookie, getCookie, setLangCookie} from './modules/cookies.js';
 
 const INIT_OPTIONS = {
   fallbackLocale: 'en',
@@ -27,17 +27,8 @@ $locale.subscribe((value) => {
 
   // if running in the client, save the language preference in a cookie
   if (typeof window !== 'undefined') {
-    const today = new Date()
-    const nextYear = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
-
-    // if no locale yet
-    if (!getCookie('locale'))  {
-      setCookie('locale', value, {
-        sameSite: 'None',
-        expires: nextYear
-      });
+      setLangCookie(value)
     }
-  }
 });
 
 // initialize the i18n library in client

@@ -1,7 +1,7 @@
 <script>
 	import Donate from './Donate.svelte'
   import { _, locale } from 'svelte-i18n';
-  import {setCookie} from '../modules/cookies'
+  import {setLangCookie} from '../modules/cookies'
 
   export let segment;
 
@@ -10,13 +10,7 @@
 
     $locale = newLocale
 
-    const today = new Date()
-    const nextYear = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
-
-    setCookie('locale', newLocale, {
-      sameSite: 'None',
-      expires: nextYear
-    })
+    setLangCookie(newLocale)
   }
 </script>
 

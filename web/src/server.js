@@ -9,6 +9,7 @@ import { i18nMiddleware } from './i18n.js';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
+// How it works: https://sapper.svelte.dev/docs#sapper_build
 polka() // You can also use Express
 	.use(
 		compression({ threshold: 0 }),

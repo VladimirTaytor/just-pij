@@ -18,6 +18,19 @@ export function getCookie(name, cookies) {
   return decodeURIComponent(cookieValue.trim());
 }
 
+export function setLangCookie(newLocale) {
+  // #dk 'None' requires secure: true
+  const sameSite = isDevelopment ? 'lax' : 'None'
+  const options = isDevelopment ? {
+    sameSite
+  } : {
+    sameSite,
+    secure: true
+  }
+
+  setCookie('locale', newLocale, options)
+}
+
 export function setCookie(name, value, options = {}) {
   if (options.expires instanceof Date) {
     options.expires = options.expires.toUTCString();
@@ -27,9 +40,12 @@ export function setCookie(name, value, options = {}) {
     [encodeURIComponent(name)]: encodeURIComponent(value),
     sameSite: 'lax',
     path: '/',
-    secure: !isDevelopment,
     ...options,
   };
+
+  console.log(Object.entries(updatedCookie)
+    .map((kv) => kv.join('='))
+    .join(';'))
 
   document.cookie = Object.entries(updatedCookie)
     .map((kv) => kv.join('='))
