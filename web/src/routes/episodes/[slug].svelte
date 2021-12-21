@@ -25,8 +25,13 @@
 
 <style>
   .content :global(h2) {
-    font-size: 1.4em;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .content :global(h3) {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .content :global(img) {
@@ -44,6 +49,10 @@
 
   .content :global(li) {
     margin: 0 0 0.5em 0;
+  }
+
+  .content {
+    font-size: 18px;
   }
 
   .listen {
@@ -80,7 +89,7 @@
   }
 
   .spotify, .youtube {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
   }
 
@@ -129,12 +138,12 @@
     </div>
   </div>
   <div class="links-container">
+    <p class="spotify"><Link href={post.spotifyLink}>{$_('podcast.listenSpotify')}</Link></p>
+    <p class="youtube"><Link href={post.youtubeLink}>{$_('podcast.listenYoutube')}</Link></p>
     <div class="metadata">
       <p>Кількість треків: {post.playlistSize}</p>
       <p>Тривалість: {post.playlistDuration}</p>
     </div>
-    <p class="spotify"><Link href={post.spotifyLink}>{$_('podcast.listenSpotify')}</Link></p>
-    <p class="youtube"><Link href={post.youtubeLink}>{$_('podcast.listenYoutube')}</Link></p>
   </div>
 </div>
 <div class="content">
