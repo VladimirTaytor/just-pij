@@ -64,12 +64,11 @@
 </svelte:head>
 
 <script>
-  import Button from '../components/Button.svelte';
   import {_} from 'svelte-i18n'
+  import fetchNowPlaying from '../services/fetchNowPlaying'
+  import Playing from '../components/Playing.svelte'
 
-  function onListenClick() {
-    console.log('onListenClick')
-  }
+  let nowPlaying = fetchNowPlaying()
 </script>
 
 <div class="header-block">
@@ -88,7 +87,15 @@
         }
       })}</h2>
 
-      <h2>{$_('home.title.nowPlaying')} <b>renie cares - якби</b></h2>
+      <h2>{$_('home.title.nowPlaying')}</h2>
+
+      <h3>
+        <Playing/>
+        {#await nowPlaying then track}
+          <b>{ track }</b>
+        {/await}
+      </h3>
+
 
       <h2 style="white-space: nowrap;">{$_('home.title.welcome')}</h2>
     </div>
