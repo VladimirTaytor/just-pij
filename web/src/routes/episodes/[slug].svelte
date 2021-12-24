@@ -138,8 +138,8 @@
     </div>
   </div>
   <div class="links-container">
-    <p class="spotify"><Link href={post.spotifyLink}>{$_('podcast.listenSpotify')}</Link></p>
-    <p class="youtube"><Link href={post.youtubeLink}>{$_('podcast.listenYoutube')}</Link></p>
+    <p class="spotify"><Link type="external" href={post.spotifyLink}>{$_('podcast.listenSpotify')}</Link></p>
+    <p class="youtube"><Link type="external" href={post.youtubeLink}>{$_('podcast.listenYoutube')}</Link></p>
     <div class="metadata">
       <p>Кількість треків: {post.playlistSize}</p>
       <p>Тривалість: {post.playlistDuration}</p>
