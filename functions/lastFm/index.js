@@ -27,6 +27,7 @@ exports.handler = async function(event, context) {
     statusCode: 200,
     body: JSON.stringify({ message: "Hello World", nowPlaying }),
     headers: {
+      "Content-Type": "application/json",
       "access-control-allow-origin": "*"
     }
   };
