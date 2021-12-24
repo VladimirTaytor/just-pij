@@ -14,10 +14,10 @@ const findCurrentPlaying = async () => {
   const latestTracks = await fetchLatestTracks()
   const latestTrack = latestTracks[0]
 
-  if (latestTrack['@attr'] && latestTrack['@attr'].nowplaying)
-    return `${latestTrack.artist['#text']} - ${latestTrack.name}`
-
-  return 'paused'
+  return {
+    name: `${latestTrack.artist['#text']} - ${latestTrack.name}`,
+    isPlaying: latestTrack['@attr'] && latestTrack['@attr'].nowplaying
+  }
 }
 
 exports.handler = async function(event, context) {
@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "Hello World", nowPlaying }),
+    body: JSON.stringify({ nowPlaying }),
     headers: {
       "Content-Type": "application/json",
       "access-control-allow-origin": "*"
