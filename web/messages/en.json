@@ -13,7 +13,7 @@
     "title": {
       "phrase": "Welcome to the home for my <a href=\"{podcastUrl}\">podcast</a>, <a href=\"{blogUrl}\">blog</a> and <a href=\"{portfolioUrl}\">portfolio</a>",
       "nowPlaying": "Now playing: ",
-      "welcome": "Make yourself at home"
+      "welcome": "Make yourself at home (/^▽^)/"
     }
   },
   "podcast": {

@@ -65,6 +65,7 @@
   import {_} from 'svelte-i18n'
   import fetchNowPlaying from '../services/fetchNowPlaying'
   import Playing from '../components/Playing.svelte'
+  import Link from '../components/Link.svelte'
 
   let nowPlaying = fetchNowPlaying()
 </script>
@@ -85,17 +86,19 @@
         }
       })}</h2>
 
-      <h2>{$_('home.title.nowPlaying')}</h2>
+      <h3>{$_('home.title.nowPlaying')}</h3>
 
       <h3>
         <Playing/>
         {#await nowPlaying then track}
-          <b>{ track }</b>
+          <Link plain type="external" href={`https://www.youtube.com/results?search_query=${track}`}>
+            <b>{ track }</b>
+          </Link>
         {/await}
       </h3>
 
 
-      <h2 style="white-space: nowrap;">{$_('home.title.welcome')}</h2>
+      <h3 style="margin-bottom: 25px">{$_('home.title.welcome')}</h3>
     </div>
   </div>
 </div>
