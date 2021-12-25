@@ -24,6 +24,10 @@
 </script>
 
 <style>
+  h1 {
+    font-weight: bold;
+  }
+
   .content :global(h2) {
     font-size: 24px;
     font-weight: 600;
@@ -122,7 +126,7 @@
 </style>
 
 <svelte:head>
-  <title>{post.title}</title>
+  <title>{`Just Pij - ${post.title}`}</title>
 </svelte:head>
 
 <div class="title-container">
