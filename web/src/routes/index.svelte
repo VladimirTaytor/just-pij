@@ -5,7 +5,7 @@
   }
 
   h1 {
-    font-size: 2.8em;
+    font-size: 4em;
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 0.5em 0;
@@ -26,7 +26,7 @@
   }
 
   .motto__image {
-    width: 100%;
+    width: 420px;
   }
 
   .motto__text-container {
@@ -39,15 +39,20 @@
     margin-bottom: 25px;
   }
 
-  @media (min-width: 480px) {
+  @media (max-width: 480px) {
     h1 {
-      font-size: 4em;
+      font-size: 2.8em;
+    }
+
+    .motto__image {
+      width: 100%;
     }
   }
 
   @media (max-width: 700px) {
     .motto__container {
       flex-direction: column-reverse;
+      align-items: center;
     }
 
     .motto__text-container {
