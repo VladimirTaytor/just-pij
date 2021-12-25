@@ -55,6 +55,29 @@
       text-align: center;
     }
   }
+
+  /* lineup class and keyframes */
+  .lineUp {
+    animation: 1s anim-lineUp ease-out;
+  }
+
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
 </style>
 
 <svelte:head>
@@ -90,9 +113,12 @@
 
       <h3>
         <Playing/>
-        {#await nowPlaying then track}
-          <Link plain type="external" href={`https://www.youtube.com/results?search_query=${track}`}>
-            <b>{ track }</b>
+        {#await nowPlaying}
+          <b>...</b>
+        {:then track}
+          <Link plain type="external"
+                href={`https://www.youtube.com/results?search_query=${track}`}>
+            <b class="lineUp">{ track }</b>
           </Link>
         {/await}
       </h3>
