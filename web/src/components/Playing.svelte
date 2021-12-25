@@ -1,6 +1,6 @@
 <style>
   .playing {
-    width: 36px;
+    width: 40px;
     display: inline-block;
 
     letter-spacing: -2px;
