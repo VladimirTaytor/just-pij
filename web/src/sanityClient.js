@@ -3,7 +3,8 @@ import { api } from '../../studio/sanity.json'
 const { projectId, dataset, token: fallbackToken } = api
 
 // Use environment variable if available, otherwise fallback to committed token
-const token = process.env.SANITY_TOKEN || fallbackToken
+// Check if process exists (server-side only)
+const token = (typeof process !== 'undefined' && process.env && process.env.SANITY_TOKEN) || fallbackToken
 
 const client = sanityClient({
   projectId,
